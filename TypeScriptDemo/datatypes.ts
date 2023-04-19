@@ -56,3 +56,9 @@ function swapNumbers(num1: number, num2: number): [number, number] {
 swapNumbs = swapNumbers(10, 20);
 
 swapNumbs[0];
+swapNumbs[1];
+
+let department: any;
+
+department = "IT";
+department = 10;
