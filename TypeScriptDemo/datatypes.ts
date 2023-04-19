@@ -25,6 +25,8 @@ let numList: Array<number>; // ts generics
 
 numList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
+let newNum = numList[0];
+
 let results = numList.filter((num) => num > 2);
 
 let num = numList.find((num) => num === 2);
@@ -36,3 +38,21 @@ console.log(num);
 console.log(sum);
 
 // lname = 10;
+
+const enum Color {
+  Red,
+  Green,
+  Blue,
+}
+
+let c: Color = Color.Blue;
+
+let swapNumbs: [firsNumber: number, secondNumber: number];
+
+function swapNumbers(num1: number, num2: number): [number, number] {
+  return [num2, num1];
+}
+
+swapNumbs = swapNumbers(10, 20);
+
+swapNumbs[0];
