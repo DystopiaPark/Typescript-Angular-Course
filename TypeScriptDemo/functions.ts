@@ -22,3 +22,14 @@ let numbers = [1, 2, 3, 4, 5];
 
 console.log(add2(2, 3, ...numbers));
 // console.log(add2(2, 3, ...[5,6,7]));
+// console.log(add2(2, 3, 4, 5, 6, 7));
+
+// Languag: typescript
+
+function getItems<Type>(items: Type[]): Type[] {
+  return new Array<Type>().concat(items);
+}
+
+let concatResult = getItems<number>([1, 2, 3, 4, 5]);
+
+let concatString = getItems<string>(["a", "b", "c", "d", "e"]);
