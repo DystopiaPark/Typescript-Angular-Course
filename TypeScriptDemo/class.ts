@@ -1,9 +1,16 @@
+interface Address {
+  street: string;
+  city: string;
+  state: string;
+  pin: string;
+}
+
 class Employee {
   #id: number;
 
   protected name: string;
 
-  address: string;
+  address: Address;
 
   get empId(): number {
     return this.#id;
@@ -17,7 +24,7 @@ class Employee {
     return 50;
   }
 
-  constructor(id: number, name: string, address: string) {
+  constructor(id: number, name: string, address: Address) {
     this.address = address;
     this.#id = id;
     this.name = name;
@@ -28,7 +35,12 @@ class Employee {
   }
 }
 
-let john = new Employee(1, "John", "Highway 71");
+let john = new Employee(1, "John", {
+  street: "ABC",
+  city: "Bangalore",
+  state: "Karnataka",
+  pin: "560076",
+});
 
 john.empId = 100;
 
